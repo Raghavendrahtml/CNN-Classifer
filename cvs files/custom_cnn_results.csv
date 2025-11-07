@@ -1,0 +1,13 @@
+Exp,Model,LR,Batch Size,Epochs,Weight Decay,Augmentation,Scheduler,Val Acc (%),Test Acc (%),Description
+1,CustomCNN_v1,0.001,256,10,0.0,medium,None,78.95,79.50,"Baseline: Simple CNN, Adam lr=0.001, medium augmentation"
+2,CustomCNN_v1,0.0001,256,10,0.0,medium,None,69.15,70.73,Lower LR: lr=0.0001 to prevent overfitting
+3,CustomCNN_v1,0.001,256,10,0.0001,medium,None,80.30,79.70,Add L2 regularization: weight_decay=1e-4
+4,CustomCNN_v1,0.001,256,10,0.0001,strong,None,75.17,74.57,Strong augmentation for better generalization
+5,CustomCNN_v2,0.001,256,10,0.0001,medium,None,84.65,84.40,Deeper CNN (v2): More filters and layers
+6,CustomCNN_v2,0.001,256,12,0.0001,medium,step,83.40,82.30,Deeper CNN + StepLR scheduler
+7,CustomCNN_v2,0.001,64,10,0.0001,medium,step,83.97,84.43,Smaller batch size (64) for noisy gradients
+8,CustomCNN_v3,0.001,256,10,0.0001,medium,None,82.40,82.17,ResNet-inspired architecture with skip connections
+9,CustomCNN_v2,0.001,256,12,0.0001,strong,cosine,86.64,86.50,CosineAnnealingLR for smooth LR decay
+10,CustomCNN_v2,0.005,256,12,0.0001,medium,plateau,81.80,81.03,Higher LR with adaptive ReduceLROnPlateau
+11,CustomCNN_v2,0.001,64,17,0.0005,strong,cosine,89.60,89.10,"Best config: deeper model, strong aug, cosine scheduler, longer training"
+12,CustomCNN_v3,0.001,64,17,0.0001,strong,cosine,86.89,85.60,ResNet-inspired with optimal hyperparameters

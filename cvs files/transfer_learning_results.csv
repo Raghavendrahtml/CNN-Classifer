@@ -1,0 +1,13 @@
+Exp,Backbone,Freeze Strategy,LR,Batch Size,Epochs,Weight Decay,Augmentation,Scheduler,Val Acc (%),Test Acc (%),Description
+1,resnet18,all,0.001,256,10,0.0001,medium,None,88.74,87.53,"Baseline: ResNet18 frozen backbone, only train classifier"
+2,resnet18,partial,0.0001,256,10,0.0001,medium,None,93.69,92.73,Partial fine-tuning: unfreeze layer3 and layer4
+3,resnet18,none,1e-05,256,12,0.0001,medium,cosine,91.38,91.33,Full fine-tuning with very low LR and cosine annealing
+4,resnet34,all,0.001,256,10,0.0001,medium,None,87.67,87.03,Deeper backbone: ResNet34 frozen
+5,resnet34,partial,0.0001,256,12,0.0001,strong,step,93.94,93.13,ResNet34 partial fine-tuning + strong augmentation
+6,resnet50,all,0.001,64,10,0.0001,medium,None,89.42,89.27,"ResNet50 frozen, smaller batch size"
+7,mobilenet_v2,all,0.001,256,10,0.0001,medium,None,88.21,87.70,MobileNetV2: efficient architecture for comparison
+8,mobilenet_v2,partial,0.0001,256,12,0.0001,strong,plateau,93.30,92.77,MobileNetV2 partial fine-tuning + adaptive LR
+9,efficientnet_b0,all,0.001,256,10,0.0001,medium,None,86.25,85.20,EfficientNet-B0: state-of-the-art efficient model
+10,efficientnet_b0,partial,0.0001,64,12,0.0001,strong,cosine,93.48,93.13,EfficientNet-B0 partial fine-tuning with optimal settings
+11,resnet34,partial,0.0005,64,17,0.0005,strong,cosine,93.80,92.73,"Best ResNet34: optimal hyperparameters, longer training"
+12,resnet50,partial,0.0005,64,17,0.0001,strong,cosine,94.09,93.20,Best ResNet50: balanced fine-tuning strategy

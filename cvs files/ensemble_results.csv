@@ -1,0 +1,11 @@
+Exp,Strategy,Num Models,Model Types,Weighted,Test Acc (%),Description
+1,soft,5,2 Custom + 3 Transfer,No,93.67,"Top 5 diverse models, uniform soft voting"
+2,soft,4,4 Custom + 0 Transfer,No,88.33,"All custom CNN models, soft voting"
+3,soft,4,0 Custom + 4 Transfer,No,94.20,"All transfer learning models, soft voting"
+4,hard,5,2 Custom + 3 Transfer,No,93.73,"Top 5 models, hard majority voting"
+5,weighted,5,2 Custom + 3 Transfer,Yes,93.53,"Top 5 models, weighted by validation accuracy"
+6,soft,8,4 Custom + 4 Transfer,No,93.40,"All available models, uniform soft voting"
+7,weighted,8,4 Custom + 4 Transfer,Yes,93.60,"All models, weighted by validation accuracy"
+8,weighted,5,2 Custom + 3 Transfer,Yes,93.53,"Diverse architectures, weighted voting"
+9,weighted,3,0 Custom + 3 Transfer,Yes,93.90,"Top 3 transfer models, weighted voting"
+10,soft,2,1 Custom + 1 Transfer,No,93.13,Best custom + Best transfer only (minimal ensemble)
