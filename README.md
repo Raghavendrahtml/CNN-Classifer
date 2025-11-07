@@ -1,0 +1,23 @@
+# 🧠 MTH 4320 / 5320 — Homework 3  
+### **Convolutional Neural Networks and PyTorch**
+
+**Student:** Raghavendra Huliyurdurga Mallesha  
+**Course:** MTH 4320 / 5320 - Deep Learning  
+**Assignment:** Homework 3 — CNNs, Transfer Learning, and Model Ensembling  
+**Framework:** PyTorch (GPU Enabled)
+
+---
+
+## 📘 Project Overview
+
+This project explores three approaches to image classification using the **Intel Image Dataset**:
+
+1. **Custom CNN** — A convolutional neural network built from scratch and tuned through systematic hyperparameter exploration.  
+2. **Transfer Learning** — Fine-tuning pretrained backbones such as **ResNet**, **EfficientNet**, and **MobileNet** to leverage prior feature learning.  
+3. **Model Ensembling** — Combining multiple trained models using **soft**, **hard**, and **weighted voting** strategies to enhance accuracy and class-wise stability.
+
+The notebook runs fully end-to-end, including training curves, confusion matrices, and performance analysis.  
+**Results show that ensemble models consistently outperform individual CNNs**, demonstrating that architectural and hyperparameter diversity improve **robustness** and **generalization**.
+
+---
+
